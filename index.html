@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnichannel Clínica Médica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sistema Omnichannel - Clínica Médica</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarTela('paciente')">Paciente</a></li>
+                <li><a href="#" onclick="mostrarTela('atendente')">Atendente</a></li>
+                <li><a href="#" onclick="mostrarTela('gerente')">Gerente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ================== TELA DO PACIENTE ================== -->
+        <section id="paciente" class="tela">
+            <h2>Área do Paciente</h2>
+            <p>Escolha um canal para iniciar atendimento:</p>
+
+            <div class="canais-container">
+                <button class="canal">WhatsApp</button>
+                <button class="canal">Instagram Direct</button>
+                <button class="canal">Facebook Messenger</button>
+                <button class="canal">E-mail</button>
+                <button class="canal">Chat do Site</button>
+            </div>
+
+            <h3>Histórico de Conversas</h3>
+            <div class="historico-box">
+                <p>Nenhuma conversa encontrada.</p>
+            </div>
+        </section>
+
+        <!-- ================== TELA DO ATENDENTE ================== -->
+        <section id="atendente" class="tela" style="display:none;">
+            <h2>Painel do Atendente</h2>
+
+            <div class="painel-atendente">
+                <div class="lista-conversas">
+                    <h3>Conversas</h3>
+                    <ul id="listaConversas">
+                        <li>Paciente 01 - WhatsApp</li>
+                        <li>Paciente 02 - Instagram</li>
+                        <li>Paciente 03 - E-mail</li>
+                    </ul>
+                </div>
+
+                <div class="janela-chat">
+                    <h3>Chat</h3>
+                    <div id="chatMensagens" class="chat-box">
+                        <p><strong>Paciente 01:</strong> Olá! Quero agendar uma consulta.</p>
+                    </div>
+
+                    <input type="text" id="mensagemInput" placeholder="Digite uma resposta...">
+                    <button onclick="enviarMensagem()">Enviar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== TELA DO GERENTE ================== -->
+        <section id="gerente" class="tela" style="display:none;">
+            <h2>Painel do Gerente</h2>
+
+            <div class="dashboard">
+                <div class="card">
+                    <h3>Atendimentos no Dia</h3>
+                    <p>42</p>
+                </div>
+
+                <div class="card">
+                    <h3>SLA Médio</h3>
+                    <p>3 min</p>
+                </div>
+
+                <div class="card">
+                    <h3>Taxa de Conversão</h3>
+                    <p>78%</p>
+                </div>
+            </div>
+
+            <h3>Supervisão em Tempo Real</h3>
+            <div class="supervisao-box">
+                <p>Atendente João está respondendo Paciente 11...</p>
+            </div>
+
+            <h3>Fila de Atendimentos</h3>
+            <ul class="fila-atendimento">
+                <li>Paciente 12 - WhatsApp</li>
+                <li>Paciente 13 - Instagram</li>
+                <li>Paciente 14 - Chat do Site</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
